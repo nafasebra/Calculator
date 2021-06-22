@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+
+import InputCalculate from './component/InputCalculate';
+import ButtonCalculate from './component/ButtonsCalculate';
+
 import './App.css';
 
-function App() {
+export default function App() {
+  const [calculate, setCalulate] = React.useState({
+    data: '',
+    equal: 0
+  });
+
+  let dataHandler = (e) => {
+    e.preventDefault();
+    let interalVal = e.target.innerHTML;
+    interalVal = interalVal.trim();
+    setCalulate({ data: calculate.data + interalVal });
+
+    if(interalVal === "=")
+      console.log(interalVal);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <InputCalculate value={calculate.data}/>
+      <ButtonCalculate handler={dataHandler}/>
     </div>
   );
-}
 
-export default App;
+}
