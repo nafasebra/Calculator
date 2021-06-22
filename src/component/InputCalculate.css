@@ -1,0 +1,9 @@
+input {
+    border: none;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 1em 0.5em;
+    background-color: transparent;
+    color: #cccccc;
+    letter-spacing: 2px;
+}
