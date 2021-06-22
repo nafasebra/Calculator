@@ -1,0 +1,16 @@
+.buttons-calculator {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+button {
+    border: none;
+    width: 22%;
+    margin: 0.2em;
+    padding: 1.1em 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: #cccccc;
+    font-size: 0.9em;
+}
