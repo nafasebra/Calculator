@@ -7,7 +7,7 @@ export default function App({ handler }) {
     return (
         <div className="buttons-calculate">
             <button onClick={(e) => handler(e)}> AC </button>
-            <button onClick={(e) => handler(e)}> &laquo; </button>
+            <button onClick={(e) => handler(e)}> C </button>
             <button onClick={(e) => handler(e)}> % </button>
             <button onClick={(e) => handler(e)}> / </button>
 

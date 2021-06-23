@@ -6,7 +6,7 @@ import ButtonCalculate from './component/ButtonsCalculate';
 import './App.css';
 
 export default function App() {
-  const [calculate, setCalulate] = React.useState({
+  const [calculate, setCalculate] = React.useState({
     data: ''
   });
 
@@ -17,20 +17,26 @@ export default function App() {
 
     switch(interalVal){
       case "=":
-        setCalulate({ data: eval(calculate.data) });
+        try{
+          setCalculate({ data: eval(calculate.data) });
+        } catch {
+          setCalculate({ data: 'ERROR!' });
+        }
       break;
       case "AC":
-        setCalulate({ data: '' });
+        setCalculate({ data: '' });
       break;
       case "±":
-        if(calculate.data.charAt(0) !== "-")
-          setCalulate({ data: "-" + calculate.data });
+        if(calculate.data.toString().charAt(0) !== "-")
+          setCalculate({ data: "-" + calculate.data });
+        else
+          setCalculate({ data: calculate.data.replace("-", "") });  
       break;
-      case "«":
-        setCalulate({ data: calculate.data.slice(0, -1) });
+      case "C":
+        setCalculate({ data: calculate.data.slice(0, -1) });
       break;
       default:
-        setCalulate({ data: calculate.data + interalVal });  
+        setCalculate({ data: calculate.data + interalVal });  
       break;
     }
   }
