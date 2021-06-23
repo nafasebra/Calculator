@@ -13,4 +13,10 @@ button {
     background-color: transparent;
     color: #cccccc;
     font-size: 0.9em;
+    border-radius: 10px;
+    transition: background 0.23s;
+}
+
+button:hover{
+    background-color: #415466;
 }
