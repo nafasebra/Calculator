@@ -2,4 +2,5 @@
 ### A simple calculator created by react
 
 
-Comming soon :)
+
+Click to view [Demo](https://nafasebra.github.io/reactjs-calculator)
