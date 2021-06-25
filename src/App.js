@@ -20,7 +20,7 @@ export default function App() {
         try{
           setCalculate({ data: eval(calculate.data) });
         } catch {
-          setCalculate({ data: 'ERROR!' });
+          setCalculate({ data: 'ERROR' });
         }
       break;
       case "AC":
@@ -36,7 +36,8 @@ export default function App() {
         setCalculate({ data: calculate.data.slice(0, -1) });
       break;
       default:
-        setCalculate({ data: calculate.data + interalVal });  
+        setCalculate({ data: calculate.data + interalVal });
+        if(calculate.data === 'ERROR') setCalculate({ data: interalVal });
       break;
     }
   }
