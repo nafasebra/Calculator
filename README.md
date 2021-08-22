@@ -11,21 +11,17 @@ Click to view [Demo](https://nafasebra.github.io/reactjs-calculator)
 
 <br>
 
-for clone this repo :
+#### 1- you will need to Node.js for run the repo 
+#### 2- clone this repo : type bellow command on cmd or terminal
 ```
 git clone https://github.com/nafasebra/reactjs-calculator
 ```
+#### 3- after install node.js, type `npm install` for add node_modules folder
+#### 4- for start this project, type `npm start` on command line or terminal
+#### 5- enjoy!
 
 <br>
 
-> you will need to Node.js for run the repo
-
-<br>
-
-for start server
-
-`npm start`
-
-for build
+for build project
 
 `npm run build`
